@@ -49,9 +49,8 @@ public class LoginTest {
 	    LoginSteps loginSteps;
 
 	    @Before
-	    public void setup() throws MalformedURLException {  	
-	    		    	
-	    	System.setProperty("webdriver.gecko.driver", SerenityUtil.getEnv("webdriver.firefoxDriver"));
+	    public void setup() throws MalformedURLException {  
+	    	System.setProperty("webdriver.gecko.driver", SerenityUtil.getDriver()+SerenityUtil.getEnv("webdriver.driver")+".exe");
 	    	user.can(BrowseTheWeb.with(driver));
 	    }
 

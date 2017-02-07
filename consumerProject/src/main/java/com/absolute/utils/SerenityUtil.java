@@ -63,6 +63,9 @@ public class SerenityUtil {
     public static String getFullDataPath(){
     	return System.getProperty("user.dir") + File.separator + "testcases" + File.separator + getEnvironment() + File.separator + getPartnerCode() + File.separator;
     }
+    public static String getDriver(){
+    	return System.getProperty("user.dir") + File.separator + "drivers" + File.separator;
+    }
     public static String getBaseUrl() {
     	String chosenPartner = "partnerLink." + getPartnerCode();
         return getEnv(chosenPartner);
